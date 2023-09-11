@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> CSS_Task_7 </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #9b415c;
+        }
+
+        h1 {
+            color: white;
+            font-family: "Oswald", sans-serif;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .registartion-form {
+            width: 500px;
+            color: #fff;
+            font-size: 18px;
+            font-family: sans-serif;
+            background-color: #6f2f42;
+            padding: 20px;
+        }
+
+        .registartion-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .registartion-form label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .registartion-form input,
+        .registartion-form select,
+        .registartion-form textarea {
+            border: none;
+            padding: 5px;
+            font-family: sans-serif;
+            width: 100%;
+        }
+
+        .registartion-form input:focus,
+        .registartion-form textarea:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgb(228, 228, 228), 0 0 10px rgb(224, 224, 224);
+        }
+
+        .registartion-form .submit {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .registartion-form .submit:hover {
+            background-color: #555;
+        }
+
+        .form-check-inline .form-check-input {
+            margin-right: 10px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+            <div class="form-group row">
+            <label for="name" class="col-sm-3 col-form-label">Name:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" placeholder="Your name">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="email" class="col-sm-3 col-form-label">Email:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="email" placeholder="Your email">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="password" class="col-sm-3 col-form-label">Password:</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="phoneNumber" class="col-sm-3 col-form-label">Phone Number:</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="phoneNumber">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Gender:</label>
+            <div class="col-sm-9">
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="language" class="col-sm-3 col-form-label">Language:</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="language">
+                <option value="">Select language</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Russian">Russian</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="zipcode" class="col-sm-3 col-form-label">Zip Code:</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="zipcode">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="about" class="col-sm-3 col-form-label">About:</label>
+            <div class="col-sm-9">
+                <textarea class="form-control" id="about" placeholder="Write about yourself..."></textarea>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+        </form>
+        </div>
+    </body>
+</html>
