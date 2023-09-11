@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS_Task_5 </title>
+    <style>
+        :root {
+            --bg-color: #d9da5c;
+            --text-color: violet;
+            --border-color: violet;
+            --button-color: blue;
+            --font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-size: var(--font-size);
+        }
+
+        .container {
+            display: grid; 
+            grid-template-columns: 1fr 3fr; 
+            grid-template-rows: auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            height: 400px; 
+            padding-top: 10px; 
+        }
+
+        nav button {
+            margin-bottom: 25px; 
+            padding: 20px;
+            background: linear-gradient(to right, #ccc 80%, #000 20%);
+            border: none;
+            color: var(--button-color);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        main {
+            margin-left: 50px;
+            color: var(--text-color);
+        }
+
+        header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid var(--border-color);
+        }
+
+        footer {
+            color: var(--text-color);
+            text-align: right;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button>Home page</button>
+            <button>Musings</button>
+            <button>My town</button>
+            <button>Links</button>
+        </nav>
+        <main>
+        <header>My first styled page</header>
+        <p>Welcome to my styled page!</p>
+
+        <p>It lacks images, but at least it has style. And it
+            has links, even if they don't go anywhere...</p>
+        <p>There should be more here, but I don't know
+            what yet.</p>
+        <hr>
+        <p>Made on 5 april 2004</p>
+        <p>By Myself</p>
+    </main>
+    </div>
+</body>
+</html>
