@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS_Task_2 </title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 10px 10px 0 10px;
+        padding: 0;
+        width: 200px;
+        height: 200px;
+        background-color: #f1f1f1;
+    }
+    li a {
+        display: block;
+        color: #2f10dc;
+        padding: 4px 8px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #f2b855;
+        color: #fff;
+    }
+    .icon {
+        margin-right: 10px;
+    }
+    table {
+        background-color: #1d3b46;
+    }
+    .column {
+        float: left;
+        width: 50%;
+    }
+    .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #cfcbcb;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .nav-list li {
+        float: left;
+        border-right:1px solid #bbb;
+    }
+
+    .nav-list li:last-child {
+        border-right: none;
+    }
+
+</style>
+</head>
+<body style="padding-top: 100px;padding-left: 300px;">
+<h1 style="padding-left: 300px;">Navigation Bars</h1>
+<div class="column">
+<h2>Vertical Navigation Bar</h2>
+<div class="box1" style="border: 2px solid black;width: 220px;">
+<ul style="background-color: rgb(173, 228, 230);">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Java</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">Bootstrap</a></li>
+</ul>
+</div>
+</div>
+<div class="column">
+<h2>Horizontal Navigation Bar</h2>
+<div class="box" style="border:2px solid black;width: 525px;">
+<ul class="nav-list">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">Java</a></li>
+    <li><a href="#contact">HTML</a></li>
+    <li><a href="#contact">CSS</a></li>
+</div>
+</ul>
+</div>
+</body>
+</html> 
+
