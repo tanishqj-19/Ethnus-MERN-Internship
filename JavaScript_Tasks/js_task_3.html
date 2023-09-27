@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js_task_3</title>
+    <style>
+        /* add a thin black line border to the form */
+        form {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        /* add a style for the buttons */
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <!-- add input boxes for the first and second number -->
+        <label for="num1">1st Number :</label>
+        <input id="num1" type="number" required><br>
+        <label for="num2">2nd Number:</label>
+        <input id="num2" type="number" required><br>
+        <!-- add buttons for multiply or divide -->
+        <button id="multiply" type="button">Multiply</button>
+        <button id="divide" type="button">Divide</button><br>
+        <!-- add a paragraph element to display the result -->
+        <p id="output">The Result Is:</p>
+    </form>
+    <script>
+        // get the values of the input elements and perform the arithmetic operation
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("output").innerHTML = "Please enter valid numbers.";
+            } else {
+                var result = 0;
+                if (operation === 'multiply') {
+                    result = num1 * num2;
+                } else if (operation === 'divide' && num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    document.getElementById("output").innerHTML = "Cannot divide by zero.";
+                    return;
+                }
+                document.getElementById("output").innerHTML = "The Result Is:<br>" + result;
+            }
+        }
+
+        // Attach click event handlers to the buttons
+        document.getElementById("multiply").addEventListener("click", function () {
+            calculate('multiply');
+        });
+
+        document.getElementById("divide").addEventListener("click", function () {
+            calculate('divide');
+        });
+    </script>
+</body>
+</html>

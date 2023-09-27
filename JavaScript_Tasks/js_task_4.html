@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+    <script>
+        // Function to display the current date
+        function showDate() {
+            var currentDate = new Date();
+            var dateOutput = currentDate.toLocaleDateString();
+            document.getElementById("dateOutput").textContent = dateOutput;
+        }
+
+        // Function to display the current time
+        function showTime() {
+            var currentTime = new Date();
+            var timeOutput = currentTime.toString();
+            document.getElementById("timeOutput").textContent = timeOutput;
+        }
+    </script>
+</head>
+<body>
+    <h1>Date and Time</h1>
+    <button onclick="showDate()">Show Date</button>
+    <p id="dateOutput"></p>
+    <button onclick="showTime()">Show Time</button>
+    <p id="timeOutput"></p>
+</body>
+</html>
